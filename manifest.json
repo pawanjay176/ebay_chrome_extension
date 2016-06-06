@@ -1,0 +1,20 @@
+{
+    "name": "Item explorer",
+    "description": "displays history of items on blockchain",
+    "version": "1.1.1",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["jquery-1.12.4.min.js","content.js"]
+        }    
+    ],
+    "permissions": [
+        "http://localhost:3000/*"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
+}
+
